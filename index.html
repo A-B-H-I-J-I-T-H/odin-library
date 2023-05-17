@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="mainheading">LIBRARY</div>
+    <div class="left">
+        <div class="leftheading">YOUR BOOKS</div>
+    </div>
+    <div class="right">
+        <button>NEW BOOK</button>
+        <form>
+            <label for="author">Author : </label>
+            <input type="text" id="author" name="author">
+            <label for="title">Title : </label>
+            <input type="text" id="title" name="title">
+            <label for="page">page : </label>
+            <input type="number" id="page" name="page">
+            <fieldset>
+                <legend>Have you read the book?</legend>
+
+                <input type="radio" id="yes" name="read" value="yes">
+                <label for="yes">yes</label>
+
+                <input type="radio" id="no" name="read" value="no">
+                <label for="no">no</label>
+            </fieldset>
+            <button type="button" onclick="createBook()">Create Book</button>
+        </form>
+    </div>
+</body>
+<script src="javascript.js"></script>
+</html>

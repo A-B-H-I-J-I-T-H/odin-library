@@ -1,0 +1,22 @@
+body {
+    display: grid;
+    grid-template: 20px 1fr / 1fr 1fr;
+}
+
+.mainheading {
+    grid-column: 1 / -1;
+}
+
+.left {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.leftheading {
+    grid-column: 1 / -1;
+}
+
+.card {
+    border: 1px solid black;
+}
