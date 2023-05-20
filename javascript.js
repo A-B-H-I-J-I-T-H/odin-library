@@ -11,34 +11,25 @@ let rvalue;
 const left = document.querySelector(".left");
 const form = document.querySelector("form");
 
-const book1 = {
-    title: "The Immortals of Meluha",
-    author: "Amish Tripathi",
-    page: 390,
-    read: "yes"
-};
+class book  {
+    constructor (title,author,page,read) {
+        this.title = title
+        this.author = author
+        this.page = page
+        this.read = read
+    }
+    addBookToLibrary () {
+        myLibrary.push(this);
+    }
+}
 
-const book2 = {
-    title: "The Alchemist",
-    author: "Paulo Coelho",
-    page: 208,
-    read: "no"
-};
+const book1 = new book("The Immortals of Meluha","Amish Tripathi",390,"yes");
+const book2 = new book("The Alchemist","Paulo Coelho",208,"no");
 
-addBookToLibrary(book1);
-addBookToLibrary(book2);
+book1.addBookToLibrary();
+book2.addBookToLibrary();
 display();
 
-function book (title,author,page,read) {
-    this.title = title
-    this.author = author
-    this.page = page
-    this.read = read
-}
-
-function addBookToLibrary (book) {
-    myLibrary.push(book);
-}
 
 function display () {
     let length = myLibrary.length;
@@ -82,7 +73,7 @@ function createBook () {
     }
     let newBook = new book(title.value,author.value,page.value,rvalue);
     removeDisplay();
-    addBookToLibrary(newBook);
+    newBook.addBookToLibrary();
     display();
 }
 
